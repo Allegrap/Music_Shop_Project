@@ -1,3 +1,5 @@
+require_relative('../db/sql_runner')
+
 class Album
 
   def initialize(options)
@@ -9,5 +11,22 @@ class Album
     @buy_price = options['buy_price'].to_i
   end
 
+  def save()
+    sql = "INSERT INTO albums (
+    title,
+    artist_id,
+    quantity,
+    sell_price,
+    buy_price
+    ) VALUES (
+    '#{@title}',
+    #{@artist_id},
+    #{@quantity},
+    #{@sell_price},
+    #{@buy_price}
+    ) RETURNING *"
+    results = SqlRunner.run(sql)
+    @id = results.first()['id'].to_i
+  end
 
 end
