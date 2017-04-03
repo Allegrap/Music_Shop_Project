@@ -15,6 +15,12 @@ class Artist
     @id = results.first()['id'].to_i
   end
 
+  def albums()
+    sql = "SELECT * FROM albums WHERE artist_id = #{@id}"
+    results = SqlRunner.run(sql)
+    return results.map { |album| Album.new(album) }
+  end
+
   def update()
     sql = "UPDATE artists SET
     (name) = ('#{@name}')

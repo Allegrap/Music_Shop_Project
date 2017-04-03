@@ -9,17 +9,18 @@ get '/albums' do
   erb(:"albums/index")
 end
 
-get '/albums/new' do
+get '/albums/:artist_id/new' do
+  @artist = Artist.find(params[:artist_id])
   erb(:"albums/new")
 end
 
 post '/albums' do
   @album = Album.new(params)
   @album.save()
-  erb(:created)
+  erb(:"albums/created")
 end
 
 get '/albums/:id' do
-  @album = Album.find(params[:id])
+  @albums = Album.find(params[:id])
   erb(:"albums/show")
 end
