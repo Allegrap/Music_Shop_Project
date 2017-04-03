@@ -42,6 +42,13 @@ class Album
     SqlRunner.run(sql)
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM albums WHERE id = #{id}"
+    album = SqlRunner.run(sql)
+    result = Student.new(student.first)
+    return result
+  end
+
   def self.total_quantity()
     return Album.all.length
   end
