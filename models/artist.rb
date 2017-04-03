@@ -28,6 +28,13 @@ class Artist
     return results.map {|artist| Artist.new(artist)}
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM artists WHERE id = #{id}"
+    artist = SqlRunner.run(sql)
+    result = Artist.new(artist.first)
+    return result
+  end
+
   def self.delete_all()
     sql = "DELETE FROM artists"
     SqlRunner.run(sql)

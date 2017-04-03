@@ -45,7 +45,7 @@ class Album
   def self.find(id)
     sql = "SELECT * FROM albums WHERE id = #{id}"
     album = SqlRunner.run(sql)
-    result = Student.new(student.first)
+    result = Album.new(album.first)
     return result
   end
 
