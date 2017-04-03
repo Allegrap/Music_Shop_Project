@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Album
 
-    attr_accessor :title, :quantity, :sell_price, :buy_price
+    attr_reader :title, :quantity, :sell_price, :buy_price
 
   def initialize(options)
     @id = options['id'].to_i
@@ -40,6 +40,10 @@ class Album
     buy_price = #{@buy_price} 
     WHERE id = #{@id}"
     SqlRunner.run(sql)
+  end
+
+  def self.total_quantity()
+    return Album.all.length
   end
 
   def self.all()
