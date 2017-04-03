@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Album
 
-    attr_reader :title, :quantity, :sell_price, :buy_price
+    attr_reader :title, :quantity, :sell_price, :buy_price, :id
 
   def initialize(options)
     @id = options['id'].to_i
@@ -49,9 +49,18 @@ class Album
     return result
   end
 
-  def self.total_quantity()
+  def self.num_of_diff_albums()
     return Album.all.length
   end
+
+  # def self.total_stock()
+  #   sql = "SELECT albums.quantity FROM albums"
+  #   results = SqlRunner.run(sql)
+
+  #   total_albums = 0
+  #   results.each {|quantity| total_albums += quantity}
+  #   return total_albums.to_i
+  # end
 
   def self.all()
     sql = "SELECT * FROM albums"

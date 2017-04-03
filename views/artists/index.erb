@@ -1,8 +1,12 @@
 <% @artists.each do|artist| %>
 <h3>Name: <%= artist.name %></h3>
 
-<p><a href="/artists/<%= artist.id() %>">Show artist details</a></p>
+<p><a href="/artists/<%= artist.id() %>">Show Albums</a></p>
 
 <br/>
+
+<form method="get" action="/albums/new">
+  <input type="submit" value="Add Album">
+</form> 
 
 <% end %>
