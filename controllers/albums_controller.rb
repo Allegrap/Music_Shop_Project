@@ -20,6 +20,12 @@ post '/albums/:id' do
   erb(:"albums/updated")
 end
 
+post '/albums/:id/delete' do
+  @album = Album.find(params[:id])
+  @album.delete()
+  erb(:"albums/delete")
+end
+
 get '/albums/:id/update' do
   @artists = Artist.all()
   @album = Album.find(params['id'])
