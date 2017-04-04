@@ -1,0 +1,33 @@
+h2 {
+  font-family: 'Press Start 2P', cursive;
+/*  font-family: 'Lobster';*/
+  font-size: 60px;
+  text-align: center;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+body {
+  background: url(/ep_naturalwhite/ep_naturalwhite.png);
+}
+
+p, h4, h3, form {
+/*  font-family: 'Cabin';*/
+  font-family: 'Cardo',
+  font-size: 20px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 8px
+  cursor: pointer;
+  background: #a52b2b;
+  color: white;
+}
+
+form {
+display: inline-block;
+}

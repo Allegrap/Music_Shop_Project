@@ -2,7 +2,8 @@
 <html>
 <head>
   <title>Music Shop</title>
-  <link rel="stylesheet" type="text/css" href="/style.css">
+  <link rel="stylesheet" type="text/css" href="/styles/structure.css">
+  <link rel="stylesheet" type="text/css" href="/styles/buttons.css">
 
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 <!--   <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'> -->
@@ -12,14 +13,18 @@
 </head>
 <body>
 
-  <h2>Music Shop</h2>
+  <h2>Big Al(legra)'s Record Store</h2>
 <nav>
   <ul>
     <li>
-      <h4 class='button'><a href='/albums'>All Albums</a></h4>
+      <form method="get" action="/albums">
+        <input class='button' type="submit" value="All Albums">
+      </form> 
     </li>
     <li>
-      <h4 class='button'><a href='/artists'>All Artists</a></h4>
+    <form method="get" action="/artists">
+      <input class='button' type="submit" value="All Artists">
+    </form> 
     </li>
   </ul>
 </nav>
