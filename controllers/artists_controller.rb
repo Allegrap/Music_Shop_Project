@@ -19,6 +19,12 @@ post '/artists' do
   erb(:"artists/created")
 end
 
+post '/artists/:id/delete' do
+  @artist = Artist.find(params[:id])
+  @artist.delete()
+  erb(:"artists/delete")
+end
+
 get '/artists/:id' do
   @artist = Artist.find(params[:id])
   @albums = @artist.albums
