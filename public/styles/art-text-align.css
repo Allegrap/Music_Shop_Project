@@ -29,3 +29,8 @@
   max-height: 300px;
   margin-left: 50px;
 }
+
+.index-image {
+  max-width: 500px;
+  max-height: 400px;
+}
