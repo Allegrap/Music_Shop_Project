@@ -19,3 +19,12 @@
 .btn_show_alb {
   font-family: 'Cardo',
 }
+
+input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 8px
+  cursor: pointer;
+  background: #a52b2b;
+  color: white;
+  border-radius: 5px;
+}

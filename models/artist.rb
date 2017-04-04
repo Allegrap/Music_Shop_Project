@@ -2,15 +2,16 @@ require_relative('../db/sql_runner')
 
 class Artist
 
-  attr_reader :id, :name
+  attr_reader :id, :name, :image_url
 
   def initialize(options)
     @id = options['id'].to_i
     @name = options['name']
+    @image_url = options['image_url']
   end
 
   def save()
-    sql = "INSERT INTO artists (name) VALUES ('#{@name}') RETURNING *"
+    sql = "INSERT INTO artists (name, image_url) VALUES ('#{@name}', '#{@image_url}') RETURNING *"
     results = SqlRunner.run(sql)
     @id = results.first()['id'].to_i
   end
@@ -23,7 +24,8 @@ class Artist
 
   def update()
     sql = "UPDATE artists SET
-    (name) = ('#{@name}')
+    (name) = ('#{@name}'),
+    (image_url) = ('#{@image_url}')
     WHERE id = #{@id};"
     SqlRunner.run(sql)
   end
@@ -31,6 +33,10 @@ class Artist
   def delete()
     sql = "DELETE FROM artists WHERE id = #{@id}"
     SqlRunner.run(sql)
+  end
+
+  def self.num_of_diff_artists()
+    return Artist.all.length
   end
 
   def self.all()

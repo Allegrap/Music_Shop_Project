@@ -16,18 +16,29 @@ body {
 
 p, h4, h3, form {
 /*  font-family: 'Cabin';*/
-  font-family: 'Cardo',
+  font-family: 'Cardo';
   font-size: 20px;
-}
-
-input[type="submit"] {
-  padding: 10px 20px;
-  font-size: 8px
-  cursor: pointer;
-  background: #a52b2b;
-  color: white;
 }
 
 form {
 display: inline-block;
+margin-left: 50px;
+}
+
+
+.album-total {
+  font-family: 'Cardo';
+  font-size: 10px
+  margin-left: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.title {
+  text-decoration: none;
+  color: black;
+}
+
+.confirmations {
+  text-align: center;
 }

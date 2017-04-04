@@ -1,15 +1,27 @@
-<form method="get" action="/artists/new">
-  <input class='button' type="submit" value="New Artist">
-</form>
-
+<br/>
 <br/>
 
-<% @artists.each do|artist| %>
-<h3><%= artist.name %></h3>
 
-<p class='btn_show_alb'><a href="/artists/<%= artist.id %>">Show Albums</a></p>
+<div class="separate_albums">
+  <% @artists.each do|artist| %>
 
-<br/>
+  <div class="separate_in_albums">
+    <div class="cover">
+      <a href="/artists/<%= artist.id %>"><img class="artist-art" src=<%= artist.image_url %>></a>
+    </div>
+
+    <div class="artist">
+      <h3><%= artist.name %></h3>
+    </div>
+  </div>
+
+  <br/>
  
+  <% end %>
+</div>
 
-<% end %>
+<p class="album-total">Total number of artists: <%= @number_of_artists %></p>
+
+<br/>
+<br/>
+<br/>

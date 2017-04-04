@@ -1,9 +1,26 @@
-<p>Title: <%= @album.title() %></p>
-<p>Quantity: <%= @album.quantity() %></p>
-<p>Artist ID: <%= @album.artist_id() %></p>
-<p>Genre: <%= @album.genre() %></p>
-<p>Sell Price: <%= @album.sell_price() %></p>
-<p>Buy Price: <%= @album.buy_price() %></p>
+
+<br/>
+
+<div class="separate_albums">
+  
+  <div class="separate_in_albums">
+      <img class="artist-art" src=<%= @album.image_url %>>
+  
+
+  <div class="artist">
+    <p><b>Title: </b><%= @album.title() %></p>
+    <p><b>Quantity: </b><%= @album.quantity() %></p>
+    <p><b>Artist ID: </b><%= @album.artist_id() %></p>
+    <p><b>Genre: </b><%= @album.genre() %></p>
+    <p><b>Image URL: </b><%= @album.image_url() %></p>
+    <p><b>Sell Price: </b><%= @album.sell_price() %></p>
+    <p><b>Buy Price: </b><%= @album.buy_price() %></p>
+  </div>
+  </div>
+</div>
+
+<br/>
+<br/>
 
 <form method="get" action="/albums/<%= @album.id %>/update">
   <input type="submit" value="Update Album">
