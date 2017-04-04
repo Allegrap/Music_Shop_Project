@@ -14,6 +14,18 @@ get '/albums/:artist_id/new' do
   erb(:"albums/new")
 end
 
+post '/albums/:id' do
+  @album = Album.new(params)
+  @album.update()
+  erb(:"albums/updated")
+end
+
+get '/albums/:id/update' do
+  @artists = Artist.all()
+  @album = Album.find(params['id'])
+  erb(:"albums/update")
+end
+
 post '/albums' do
   @album = Album.new(params)
   @album.save()
@@ -21,6 +33,6 @@ post '/albums' do
 end
 
 get '/albums/:id' do
-  @albums = Album.find(params[:id])
+  @album = Album.find(params[:id])
   erb(:"albums/show")
 end

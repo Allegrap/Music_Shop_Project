@@ -1,9 +1,9 @@
 <h4><a href='/artists/new'>New Artist</a></h4>
 
 <% @artists.each do|artist| %>
-<h3 class='test'><%= artist.name %></h3>
+<h3><%= artist.name %></h3>
 
-<p><a href="/artists/<%= artist.id() %>">Show Albums</a></p>
+<p><a href="/artists/<%= artist.id %>">Show Albums</a></p>
 
 <br/>
 
