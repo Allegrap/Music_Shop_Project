@@ -1,0 +1,10 @@
+<form method="post" action="/artists/<%= @artist.id %>">
+  <label for="name">Name:</label>
+  <input id="name" type="text" name="name" value="<%= @artist.name %>" />
+
+  <br/>
+  <br/>
+
+  <input type="submit" value="Update Artist" />
+
+</form>
