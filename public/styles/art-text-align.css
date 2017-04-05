@@ -2,23 +2,13 @@ img {
   border: 1px black solid;
 }
 
-.cover-art {
-  max-width: 300px;
-  max-height: 300px;
-  margin-left: 50px;
-}
-
-.text_center {
-  justify-content: center;
-}
-
-.separate_albums {
+.separate-albums {
   display: flex;
   flex-direction: column;
   font-size: 20px;
 }
 
-.separate_in_albums {
+.separate-in-albums {
   display: flex;
   flex-direction: row;
 }
@@ -43,21 +33,19 @@ img {
   border: none;
 }
 
-.main-multiple-albums {
+#main-multiple-albums {
   display: flex;
 }
 
-.inside-multiple-albums {
+#inside-multiple-albums {
   display: flex;
   flex-direction: column;
   width: 40%;
 }
 
-.div-2 {
+.album-list-in-multiple {
   display: flex;
   flex-direction: column;
-  max-width: 50%;
+  max-width: 550px;
   word-wrap: break-word;
 }
-
-

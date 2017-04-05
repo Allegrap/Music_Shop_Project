@@ -6,8 +6,6 @@ require_relative('../models/artist')
 
 get '/albums' do
   @albums = Album.all
-  @number_of_albums = Album.num_of_diff_albums()
-  @all_stock = Album.total_stock()
   erb(:"albums/index")
 end
 

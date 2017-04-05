@@ -1,12 +1,21 @@
-<h1>Record Store</h1>
+<h1>Record Store Management</h1>
 
-<div class="separate_in_albums">
-<img id="index-image" src="shelves.jpg"/>
+<br/>
 
-  <div class="separate_albums artist">
-  <p>Welcome to Big Al(legra)'s Record Store!</p>
+<div class="separate-in-albums">
+  <img id="index-image" src="shelves.jpg"/>
 
-  <p>Here you can check stock and manage your collection.</p>
+  <div class="separate-albums artist">
+    <p>Welcome to Big Al(legra)'s Record Store!</p>
+    <p>Here you can check stock and manage your collection.</p>
+    <p>Current stats: </p>
+
+    <div class="album-total">
+      <p>Total number of artists: <%= @number_of_artists %></p>
+
+      <p>Total number of albums: <%= @number_of_albums %></p>
+      <p>Total stock: <%= @all_stock %></p>
+    </div>
   </div>
 </div>
 

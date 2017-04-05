@@ -1,29 +1,20 @@
 <br/>
 <br/>
 
-<p class="album-total">Total number of artists: <%= @number_of_artists %></p>
-
-<br/>
-<br/>
-<br/>
-
-
-<div class="separate_albums">
+<div class="separate-albums">
   <% @artists.each do|artist| %>
 
-  <div class="separate_in_albums">
+    <div class="separate-in-albums">
       <a href="/artists/<%= artist.id %>"><img class="artist-art" src=<%= artist.image_url %>></a>
 
-    <div class="artist">
-      <h3><%= artist.name %></h3>
+      <div class="artist">
+        <h3><%= artist.name %></h3>
+      </div>
     </div>
-  </div>
 
-  <br/>
- 
+    <br/>
   <% end %>
 </div>
-
 
 <br/>
 <br/>

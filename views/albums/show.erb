@@ -1,21 +1,19 @@
 <br/>
 
-<div class="separate_albums">
+<div class="separate-albums">
+  <div class="separate-in-albums">
+    <img class="artist-art" src=<%= @album.image_url %>>
   
-  <div class="separate_in_albums">
-      <img class="artist-art" src=<%= @album.image_url %>>
-  
-
-  <div class="artist">
-    <h3 id="artist-name"><%= @album.artist.name %> </h3>
-    <p><b>Title: </b><%= @album.title() %></p>
-    <p><b>Quantity: </b><%= @album.quantity() %></p>
-    <p><b>Artist ID: </b><%= @album.artist_id() %></p>
-    <p><b>Genre: </b><%= @album.genre() %></p>
-    <p><b>Image URL: </b><span><%= @album.image_url() %></span></p>
-    <p><b>Buy Price: </b>£<%= @album.buy_price() %></p>
-    <p><b>Sell Price: </b>£<%= @album.sell_price() %></p>
-  </div>
+    <div class="artist">
+      <h3 id="artist-name"><%= @album.artist.name %> </h3>
+      <p><b>Title: </b><%= @album.title() %></p>
+      <p><b>Quantity: </b><%= @album.quantity() %></p>
+      <p><b>Artist ID: </b><%= @album.artist_id() %></p>
+      <p><b>Genre: </b><%= @album.genre() %></p>
+      <p><b>Image URL: </b><span><%= @album.image_url() %></span></p>
+      <p><b>Buy Price: </b>£<%= @album.buy_price() %></p>
+      <p><b>Sell Price: </b>£<%= @album.sell_price() %></p>
+    </div>
   </div>
 </div>
 
@@ -31,4 +29,3 @@
 <br/>
 <br/>
 <br/>
-

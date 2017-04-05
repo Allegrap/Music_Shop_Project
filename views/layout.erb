@@ -7,32 +7,30 @@
   <link rel="stylesheet" type="text/css" href="/styles/art-text-align.css">
 
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-<link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
-
+  <link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
-
   <a id="title" href="/"><h2>Big Allegra's Record Store</h2></a>
-<nav>
-  <ul>
-    <li>
-      <form method="get" action="/albums">
-        <input class='button' type="submit" value="All Albums">
-      </form> 
-    </li>
-    <li>
-    <form method="get" action="/artists">
-      <input class='button' type="submit" value="All Artists">
-    </form> 
-    </li>
-    <li>
-      <form method="get" action="/artists/new">
-        <input class='button' type="submit" value="New Artist">
-      </form>
-    </li>
-  </ul>
-</nav>
-
+  <nav>
+    <ul>
+      <li>
+        <form method="get" action="/albums">
+          <input class='button' type="submit" value="All Albums">
+        </form> 
+      </li>
+      <li>
+        <form method="get" action="/artists">
+          <input class='button' type="submit" value="All Artists">
+        </form> 
+      </li>
+      <li>
+        <form method="get" action="/artists/new">
+          <input class='button' type="submit" value="New Artist">
+        </form>
+      </li>
+    </ul>
+  </nav>
 <%= yield %>
 </body>
 </html>

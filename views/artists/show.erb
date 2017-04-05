@@ -1,57 +1,54 @@
 <h3 id="middle"><%= @artist.name() %></h3>
 
+<div id="main-multiple-albums">
+  <div id="inside-multiple-albums">
+    <img class="artist-art" src=<%= @artist.image_url %>>
 
-<div class="main-multiple-albums">
-  
-  <div class="inside-multiple-albums">
-      <img class="artist-art" src=<%= @artist.image_url %>>
+    <br/>
+    <br/>
+
+    <div>
+      <form method="get" action="/albums/<%= @artist.id %>/new">
+        <input type="submit" value="Add Album">
+      </form> 
 
       <br/>
       <br/>
-      <div>
-    <form method="get" action="/albums/<%= @artist.id %>/new">
-      <input type="submit" value="Add Album">
-    </form> 
 
-    <br/>
-    <br/>
+      <form method="get" action="/artists/<%= @artist.id %>/update">
+        <input type="submit" value="Update Artist">
+      </form> 
 
-    <form method="get" action="/artists/<%= @artist.id %>/update">
-      <input type="submit" value="Update Artist">
-    </form> 
+      <br/>
+      <br/>
 
-    <br/>
-    <br/>
-
-    <form method="post" action="/artists/<%= @artist.id %>/delete">
-      <input type="submit" value="Delete Artist">
-    </form>
+      <form method="post" action="/artists/<%= @artist.id %>/delete">
+        <input type="submit" value="Delete Artist">
+      </form>
     </div>
   </div>
   
   <% @albums.each do|album| %>
-  <div class="div-2">
-  <h3>Title: <%= album.title %></h3>
-  <p>Artist ID: <%= album.artist_id %></p>
-  <p>Genre: <%= album.genre %></p>
-  <p>Image URL: <%= album.image_url %></p>
-  <p>Quantity: <%= album.quantity %></p>
-  <p>Sell Price: <%= album.sell_price %></p>
-  <p>Buy Price: <%= album.buy_price %></p>
-  <p>Stock Level: <%= album.show_stock_level %></p>
+    <div class="album-list-in-multiple">
+      <h3>Title: <%= album.title %></h3>
+      <p>Artist ID: <%= album.artist_id %></p>
+      <p>Genre: <%= album.genre %></p>
+      <p>Image URL: <%= album.image_url %></p>
+      <p>Quantity: <%= album.quantity %></p>
+      <p>Sell Price: <%= album.sell_price %></p>
+      <p>Buy Price: <%= album.buy_price %></p>
+      <p>Stock Level: <%= album.show_stock_level %></p>
 
-<br/>
-<br/>
-<hr/>
-<br/>
-<br/>
-<br/>
+      <br/>
+      <br/>
+      <hr/>
+      <br/>
+      <br/>
+      <br/>
 
   <% end %>
-  </div>
-
-
-  </div>
+    </div>
+</div>
 
 <br/>
 <br/>
