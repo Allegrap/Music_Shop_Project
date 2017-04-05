@@ -1,7 +1,15 @@
+img {
+  border: 1px black solid;
+}
+
 .cover-art {
   max-width: 300px;
   max-height: 300px;
   margin-left: 50px;
+}
+
+.text_center {
+  justify-content: center;
 }
 
 .separate_albums {
@@ -15,23 +23,41 @@
   flex-direction: row;
 }
 
-.text_center {
-  justify-content: center;
-}
-
-.artist {
-  padding-left: 150px;
-  float: right;
-}
-
 .artist-art {
   max-width: 300px;
   max-height: 300px;
   margin-left: 50px;
 }
 
-.index-image {
+.artist {
+  padding-left: 150px;
+  float: right;
+  width: 600px;
+  word-wrap: break-word;
+}
+
+#index-image {
   max-width: 500px;
   max-height: 400px;
   padding-left: 50px;
+  border: none;
 }
+
+.main-multiple-albums {
+  display: flex;
+}
+
+.inside-multiple-albums {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.div-2 {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  word-wrap: break-word;
+}
+
+

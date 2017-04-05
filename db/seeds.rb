@@ -5,7 +5,6 @@ require('pry-byebug')
 Album.delete_all()
 Artist.delete_all()
 
-
 artist1 = Artist.new({
   'name' => 'James Blake',
   'image_url' => 'http://cdn.pitchfork.com/albums/19037/b7213934.jpg'
@@ -31,11 +30,17 @@ artist5 = Artist.new({
   'image_url' => 'https://static.gigwise.com/artists/Elbow2011Press600.jpg'
   })
 
+artist6 = Artist.new({
+  'name' => 'SBTRKT',
+  'image_url' => 'https://img.discogs.com/IvJ5NgDIh00JLJudojFpeu6MVQc=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-2959170-1330261355.jpeg.jpg'
+  })
+
 artist1.save()
 artist2.save()
 artist3.save()
 artist4.save()
 artist5.save()
+artist6.save()
 
 album1 = Album.new({
   'title' => 'The Colour in Anything',
@@ -97,12 +102,45 @@ album6 = Album.new({
   'buy_price' => 6
   })
 
+album7 = Album.new({
+  'title' => 'SBTRKT',
+  'artist_id' => artist6.id,
+  'genre' => 'Soul/Future Garage',
+  'image_url' => 'https://img.discogs.com/IvJ5NgDIh00JLJudojFpeu6MVQc=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-2959170-1330261355.jpeg.jpg',
+  'quantity' => 47,
+  'sell_price' => 18,
+  'buy_price' => 9
+  })
+
+album8 = Album.new({
+  'title' => 'James Blake',
+  'artist_id' => artist1.id,
+  'genre' => 'Soul',
+  'image_url' => 'https://images-na.ssl-images-amazon.com/images/I/51tBkpaLAjL.jpg',
+  'quantity' => 35,
+  'sell_price' => 14,
+  'buy_price' => 8
+  })
+
+album9 = Album.new({
+  'title' => 'Wonder Where We Land',
+  'artist_id' => artist6.id,
+  'genre' => 'Soul/Future Garage',
+  'image_url' => 'https://upload.wikimedia.org/wikipedia/en/9/9c/Wonder_Where_We_Land.jpg',
+  'quantity' => 25,
+  'sell_price' => 13,
+  'buy_price' => 6
+  })
+
 album1.save()
 album2.save()
 album3.save()
 album4.save()
 album5.save()
 album6.save()
+album7.save()
+album8.save()
+album9.save()
 
 
 binding.pry

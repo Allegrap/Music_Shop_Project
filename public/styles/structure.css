@@ -19,7 +19,7 @@ h2 {
   text-align: center;
 }
 
-.title {
+#title {
   text-decoration: none;
   color: black;
 }
@@ -41,12 +41,13 @@ margin-left: 50px;
   margin-left: 50px;
   text-align: center;
   font-weight: bold;
+  text-decoration: underline;
 }
 
 .confirmations {
   text-align: center;
 }
 
-.artist-name {
+#artist-name {
   font-size: 30px;
 }

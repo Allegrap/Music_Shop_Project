@@ -1,33 +1,29 @@
 <br/>
 
+<div class="album-total">
+  <p>Total number of albums: <%= @number_of_albums %></p>
+  <p>Total stock: <%= @all_stock %></p>
+</div>
 
-  <p class="album-total">Total number of albums: <%= @number_of_albums %></p>
-  <p class="album-total">Total stock: <%= @all_stock %></p>
+<br/>
+<br/>
 
-  <br/>
-  <br/>
-
-  <div class="separate_albums">
-    <% @albums.each do|album| %>
+<div class="separate_albums">
+  <% @albums.each do|album| %>
 
     <div class="separate_in_albums">
-      <div class="cover">
       <a href="/albums/<%= album.id() %>"><img class="cover-art" src=<%= album.image_url %>></a>
-      </div>
 
       <div class="artist">
         <h3><%= album.title %></h3>
         <p><%= album.artist.name %> </p>
       </div>
     </div>
+    <br/>
+  <% end %>
+</div>
 
-      <br/>
-
-      <% end %>
-  </div>
-
-
-  <br/>
-  <br/>
-  <br/>
-  <br/>
+<br/>
+<br/>
+<br/>
+<br/>

@@ -12,9 +12,7 @@
   <% @artists.each do|artist| %>
 
   <div class="separate_in_albums">
-    <div class="cover">
       <a href="/artists/<%= artist.id %>"><img class="artist-art" src=<%= artist.image_url %>></a>
-    </div>
 
     <div class="artist">
       <h3><%= artist.name %></h3>
