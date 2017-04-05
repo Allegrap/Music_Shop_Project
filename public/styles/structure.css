@@ -1,8 +1,11 @@
-h2 {
-  font-family: 'Press Start 2P', cursive;
-/*  font-family: 'Lobster';*/
-  font-size: 60px;
-  text-align: center;
+body {
+  background: url(/ep_naturalwhite/ep_naturalwhite.png);
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 5.5%;
 }
 
 h1 {
@@ -10,17 +13,18 @@ h1 {
   font-size: 40px;
 }
 
-nav ul li {
-  list-style: none;
-  display: inline-block;
+h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 60px;
+  text-align: center;
 }
 
-body {
-  background: url(/ep_naturalwhite/ep_naturalwhite.png);
+.title {
+  text-decoration: none;
+  color: black;
 }
 
 p, h4, h3, form {
-/*  font-family: 'Cabin';*/
   font-family: 'Cardo';
   font-size: 20px;
 }
@@ -39,11 +43,10 @@ margin-left: 50px;
   font-weight: bold;
 }
 
-.title {
-  text-decoration: none;
-  color: black;
-}
-
 .confirmations {
   text-align: center;
+}
+
+.artist-name {
+  font-size: 30px;
 }
